@@ -40,7 +40,7 @@ class QuarkusExtensionCatalogService {
         init {
             checkState(platformVersion.isNotEmpty()) { "io.quarkus.code.quarkus-platform-version must not be null or empty" }
             checkState(bundledQuarkusVersion.isNotEmpty()) { "io.quarkus.code.quarkus-version must not be null or empty" }
-            checkState(descriptor.quarkusVersion == bundledQuarkusVersion, "The platform version (%s) must be compatible with the bundled Quarkus version (%s != %s)", descriptor.bomVersion, descriptor.quarkusVersion, bundledQuarkusVersion)
+            //checkState(descriptor.quarkusVersion == bundledQuarkusVersion, "The platform version (%s) must be compatible with the bundled Quarkus version (%s != %s)", descriptor.bomVersion, descriptor.quarkusVersion, bundledQuarkusVersion)
             if (!io.quarkus.platform.tools.config.QuarkusPlatformConfig.hasGlobalDefault()) {
                 io.quarkus.platform.tools.config.QuarkusPlatformConfig.defaultConfigBuilder().setPlatformDescriptor(descriptor).build()
             }

@@ -33,9 +33,9 @@
 
         <!-- Quarkus Platform version must be compatible with Quarkus version -->
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-        <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
+        <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.artifact-id.json>${quarkus.platform.artifact-id}</quarkus.platform.artifact-id.json>
-        <quarkus.platform.version>1.8.3.Final</quarkus.platform.version>
+        <quarkus.platform.version>999-SNAPSHOT</quarkus.platform.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -90,8 +90,8 @@
         </dependency>
         <dependency>
             <groupId>${quarkus.platform.group-id}</groupId>
-            <artifactId>${quarkus.platform.artifact-id.json}</artifactId>
-            <version>${quarkus.platform.version}</version>
+            <artifactId>quarkus-universe-bom</artifactId>
+            <version>1.8.3.Final</version>
             <type>json</type>
         </dependency>
         <dependency>
@@ -141,7 +141,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-junit5</artifactId>
+            <artifactId>quarkus-junit5-web</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
